@@ -2,10 +2,10 @@
 
 [![NPM](https://nodei.co/npm/bun-graphql-loader.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/bun-graphql-loader/)
 
-[![npm version](https://img.shields.io/npm/v/bun-graphql-loader.svg)](https://www.npmjs.com/package/bun-graphql-loader)
-![Tag: Bun Plugin](https://img.shields.io/badge/Bun_Plugin-orange)
-![Tag: GraphQL](https://img.shields.io/badge/GraphQL-orange)
-![Tag: TypeScript](https://img.shields.io/badge/TypeScript-orange)
+![Bun Badge](https://img.shields.io/badge/Bun-000?logo=bun&logoColor=fff&style=for-the-badge)
+[![npm version](https://img.shields.io/npm/v/bun-graphql-loader.svg?logoColor=fff&style=for-the-badge)](https://www.npmjs.com/package/bun-graphql-loader)
+![GraphQL Badge](https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=fff&style=for-the-badge)
+![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)
 
 A Bun plugin for loading GraphQL .gql and .graphql files, using on [graphql-tag](https://github.com/apollographql/graphql-tag). Based on [vite-plugin-graphql-loader](https://www.npmjs.com/package/vite-plugin-graphql-loader).
 
