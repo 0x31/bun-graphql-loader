@@ -58,6 +58,8 @@ Now you can import queries from `.gql` or `.graphql` files.
 `example.graphql`:
 
 ```graphql
+#import "./ExampleImport.graphql"
+
 fragment ExampleFragment on example {
     id
     name
@@ -66,6 +68,7 @@ fragment ExampleFragment on example {
 query ExampleQuery {
     example {
         ...ExampleFragment
+        ...ExampleImport
     }
 }
 ```
