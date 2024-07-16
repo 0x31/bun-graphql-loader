@@ -15,7 +15,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/noiach/bun-graphql-loader.git"
+        "url": "git+https://github.com/0x31/bun-graphql-loader.git"
     },
     "keywords": [
         "bun",
@@ -23,12 +23,12 @@
         "graphql",
         "graphql-tag"
     ],
-    "author": "noiach",
+    "author": "0x31",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/noiach/bun-graphql-loader/issues"
+        "url": "https://github.com/0x31/bun-graphql-loader/issues"
     },
-    "homepage": "https://github.com/noiach/bun-graphql-loader#readme",
+    "homepage": "https://github.com/0x31/bun-graphql-loader",
     "dependencies": {
         "graphql": "^16.8.1",
         "graphql-tag": "^2.12.6",

@@ -1,6 +1,6 @@
 # bun-graphql-loader
 
-[![NPM](https://nodei.co/npm/bun-graphql-loader.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/bun-graphql-loader/)
+[![NPM](https://nodei.co/npm/bun-graphql-loader.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/bun-graphql-loader)
 
 ![Bun Badge](https://img.shields.io/badge/Bun-000?logo=bun&logoColor=fff&style=for-the-badge)
 [![npm version](https://img.shields.io/npm/v/bun-graphql-loader.svg?logoColor=fff&style=for-the-badge)](https://www.npmjs.com/package/bun-graphql-loader)
