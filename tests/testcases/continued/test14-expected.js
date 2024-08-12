@@ -1,19 +1,15 @@
 import Import____test1_gql_ from "./test1.gql";
+import Import____test1_gql__ from "./test1.gql";
 const _gql_source = `#import "./test1.gql"
+#import "./test1.gql"
 
 query TestQuery {
     test(where: { name: { _eq: "test" } }) {
         ...TestFragment
     }
 }
-
-query TestQuery2 {
-    test(where: { name: { _eq: "test" } }) {
-        ...TestFragment
-    }
-}
 `;
-const _gql_doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"TestQuery"},"variableDefinitions":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"test"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"name"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_eq"},"value":{"kind":"StringValue","value":"test","block":false}}]}}]}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestFragment"},"directives":[]}]}}]}},{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"TestQuery2"},"variableDefinitions":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"test"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"name"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_eq"},"value":{"kind":"StringValue","value":"test","block":false}}]}}]}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestFragment"},"directives":[]}]}}]}}],"loc":{"start":0,"end":261,"source":{"name":"GraphQL request","locationOffset":{"line":1,"column":1},"body":_gql_source}}};
+const _gql_doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"TestQuery"},"variableDefinitions":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"test"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"name"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_eq"},"value":{"kind":"StringValue","value":"test","block":false}}]}}]}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestFragment"},"directives":[]}]}}]}}],"loc":{"start":0,"end":186,"source":{"name":"GraphQL request","locationOffset":{"line":1,"column":1},"body":_gql_source}}};
 const bunGraphqlLoaderUniqueChecker = (defs) => {
   const names = {};
   return defs.filter(function(def) {
@@ -29,6 +25,7 @@ const bunGraphqlLoaderUniqueChecker = (defs) => {
   });
 };
 _gql_doc.definitions = bunGraphqlLoaderUniqueChecker(_gql_doc.definitions.concat(Import____test1_gql_.definitions));
+_gql_doc.definitions = bunGraphqlLoaderUniqueChecker(_gql_doc.definitions.concat(Import____test1_gql__.definitions));
 const bunGraphqlLoaderExtractQuery = (doc, operationName) => {
   const collectFragmentReferences = (node, refs) => {
     if (node.kind === "FragmentSpread")
@@ -91,7 +88,6 @@ const bunGraphqlLoaderExtractQuery = (doc, operationName) => {
   return newDoc;
 };
 export const TestQuery = bunGraphqlLoaderExtractQuery(_gql_doc, "TestQuery");
-export const TestQuery2 = bunGraphqlLoaderExtractQuery(_gql_doc, "TestQuery2");
-export const _queries = {TestQuery,TestQuery2};
+export const _queries = {TestQuery};
 export const _fragments = {};
 export default _gql_doc;

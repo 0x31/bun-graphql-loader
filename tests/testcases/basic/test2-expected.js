@@ -22,7 +22,7 @@ const bunGraphqlLoaderUniqueChecker = (defs) => {
     }
   });
 };
-_gql_doc.definitions = _gql_doc.definitions.concat(bunGraphqlLoaderUniqueChecker(Import____test1_gql_.definitions));
+_gql_doc.definitions = bunGraphqlLoaderUniqueChecker(_gql_doc.definitions.concat(Import____test1_gql_.definitions));
 const bunGraphqlLoaderExtractQuery = (doc, operationName) => {
   const collectFragmentReferences = (node, refs) => {
     if (node.kind === "FragmentSpread")

@@ -39,7 +39,7 @@ const expandImports = (
 
             imports.push(`import ${importName} from ${importFile};\n`);
             importAppends.push(
-                `${DOC_NAME}.definitions = ${DOC_NAME}.definitions.concat(${bunGraphqlLoaderUniqueChecker.name}(${importName}.definitions));\n`,
+                `${DOC_NAME}.definitions = ${bunGraphqlLoaderUniqueChecker.name}(${DOC_NAME}.definitions.concat(${importName}.definitions));\n`,
             );
         }
 
