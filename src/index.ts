@@ -23,11 +23,11 @@ const expandImports = (
     // Go through each line, checking if it is an import. Uses `.some` instead
     // of `.forEach` so it can return early after finding a non-export.
     lines.some((line: string) => {
-        const result = line.match(/^#\s?import (.+)$/);
+        const result = line.match(/^#\s?import (?:.* from )?(.+)$/);
 
         // If it's an import, replace it with an ESM import.
         if (result) {
-            const [_, importFile] = result;
+            let [_, importFile] = result;
 
             // Generate name for the import based on the filepath.
             let importName = "Import_" + importFile.replace(/[^a-z0-9]/gi, "_");
@@ -36,6 +36,10 @@ const expandImports = (
                 importName = importName + "_";
             }
             importNames.add(importName);
+
+            if (!importFile.match(/^".*"$/) && !importFile.match(/^'.*'$/)) {
+                importFile = `"${importFile}"`;
+            }
 
             imports.push(`import ${importName} from ${importFile};\n`);
             importAppends.push(
